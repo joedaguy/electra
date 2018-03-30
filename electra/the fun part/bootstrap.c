@@ -350,6 +350,10 @@ void extract_bootstrap() {
     waitpid(pd, NULL, 0);
     posix_spawn(&pd, "/electra/rm", NULL, NULL, (char **)&(const char*[]){ "rm", "-rf", "/usr/libexec/gpg*", NULL }, NULL);
     waitpid(pd, NULL, 0);
+    posix_spawn(&pd, "/electra/rm", NULL, NULL, (char **)&(const char*[]){ "rm", "-rf", "/usr/libexec/gpg", NULL }, NULL);
+    waitpid(pd, NULL, 0);
+    //posix_spawn(&pd, "/electra/rm", NULL, NULL, (char **)&(const char*[]){ "rm", "-rf", "/usr/libexec/gpg*", NULL }, NULL);
+    //waitpid(pd, NULL, 0);
     posix_spawn(&pd, "/electra/rm", NULL, NULL, (char **)&(const char*[]){ "rm", "-rf", "/usr/libexec/frcode", NULL }, NULL);
     waitpid(pd, NULL, 0);
     posix_spawn(&pd, "/electra/rm", NULL, NULL, (char **)&(const char*[]){ "rm", "-rf", "/usr/libexec/bigram", NULL }, NULL);

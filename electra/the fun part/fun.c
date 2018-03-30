@@ -266,21 +266,9 @@ do { \
     }
     unlink("/.amfid_success");
     
-    int bootstrapped = open("/.bootstrapped_electra", O_RDONLY);
+/* int bootstrapped = open("/.bootstrapped_electra", O_RDONLY);
     if (bootstrapped == -1) {
-        if (checkLiberiOS()){
-            removingLiberiOS();
-            removeLiberiOS();
-        }
-        if (topangaInstalled()){
-            close(bootstrapped);
-            wk64(IOSurfaceRootUserClient_port + koffset(KSTRUCT_OFFSET_IPC_PORT_IP_KOBJECT), IOSurfaceRootUserClient_addr);
-            unlink("/electra/rm");
-            return -2;
-        }
-        removingElectraBeta();
-        removeElectraBeta();
-        
+
         printf("APFS Snapshots: \n");
         printf("=========\n");
         list_snapshots("/");
@@ -331,7 +319,7 @@ do { \
         }
     }
     close(bootstrapped);
-    
+*/
     extract_bootstrap();
     unlink("/electra/createSnapshot");
     unlink("/electra/rm");

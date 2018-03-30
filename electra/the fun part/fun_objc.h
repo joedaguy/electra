@@ -20,6 +20,4 @@ void removingLiberiOS(void);
 void removingElectraBeta(void);
 void installingCydia(void);
 void cydiaDone(void);
-
-void blockSaurikRepo(void);
 #endif /* fun_objc_h */

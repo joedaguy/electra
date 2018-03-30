@@ -13,7 +13,6 @@
 		176718DE201CB8B100FDF1CF /* offsetof.c in Sources */ = {isa = PBXBuildFile; fileRef = 176718DC201CB8B100FDF1CF /* offsetof.c */; };
 		176718E1201CC80B00FDF1CF /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 176718DF201CC80A00FDF1CF /* utils.c */; };
 		17909C752030BBC60078B16A /* bootstrap.c in Sources */ = {isa = PBXBuildFile; fileRef = 17909C732030BBC60078B16A /* bootstrap.c */; };
-		17D60E912032280600902E73 /* bootstrap.tar.gz in Resources */ = {isa = PBXBuildFile; fileRef = 17D60E902032280600902E73 /* bootstrap.tar.gz */; };
 		4A7B89692010255800CB6439 /* jailbreakd.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A7B89682010255800CB6439 /* jailbreakd.plist */; };
 		6545304C200E8F600017BA60 /* remap_tfp_set_hsp.c in Sources */ = {isa = PBXBuildFile; fileRef = 6545304B200E8F600017BA60 /* remap_tfp_set_hsp.c */; };
 		B003EB351FC583CB00C58441 /* kmem.c in Sources */ = {isa = PBXBuildFile; fileRef = B003EB331FC583CA00C58441 /* kmem.c */; };
@@ -78,7 +77,6 @@
 		176718E0201CC80B00FDF1CF /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
 		17909C732030BBC60078B16A /* bootstrap.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bootstrap.c; sourceTree = "<group>"; };
 		17909C742030BBC60078B16A /* bootstrap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = bootstrap.h; sourceTree = "<group>"; };
-		17D60E902032280600902E73 /* bootstrap.tar.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = bootstrap.tar.gz; sourceTree = "<group>"; };
 		4A7B89682010255800CB6439 /* jailbreakd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = jailbreakd.plist; sourceTree = "<group>"; };
 		4A9599892020080100A36B90 /* xpc_minimal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = xpc_minimal.h; sourceTree = "<group>"; };
 		6545304A200E8F600017BA60 /* remap_tfp_set_hsp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = remap_tfp_set_hsp.h; sourceTree = "<group>"; };
@@ -92,7 +90,7 @@
 		B04E25071FCD6DB300F09CCE /* kutils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = kutils.c; sourceTree = "<group>"; };
 		B04E25081FCD6DB300F09CCE /* kutils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = kutils.h; sourceTree = "<group>"; };
 		B04E250A1FCF083A00F09CCE /* arm64_state.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = arm64_state.h; sourceTree = "<group>"; };
-		B07A02391FB09B6F0018ACE5 /* electra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = electra.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B07A02391FB09B6F0018ACE5 /* electraRemover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = electraRemover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B07A023C1FB09B6F0018ACE5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B07A023D1FB09B6F0018ACE5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B07A023F1FB09B6F0018ACE5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -174,7 +172,6 @@
 				F1A6290C20357C45007B52B4 /* move.sh */,
 				F1531E102009709700DD5051 /* tar.gz */,
 				175043CA203230350064B7CE /* launchctl.gz */,
-				17D60E902032280600902E73 /* bootstrap.tar.gz */,
 				F11625EA2032CD3500515402 /* rm.gz */,
 				4A7B89682010255800CB6439 /* jailbreakd.plist */,
 			);
@@ -282,7 +279,7 @@
 		B07A023A1FB09B6F0018ACE5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B07A02391FB09B6F0018ACE5 /* electra.app */,
+				B07A02391FB09B6F0018ACE5 /* electraRemover.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -359,9 +356,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B07A02381FB09B6F0018ACE5 /* electra */ = {
+		B07A02381FB09B6F0018ACE5 /* electraRemover */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "electra" */;
+			buildConfigurationList = B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "electraRemover" */;
 			buildPhases = (
 				B07A02351FB09B6F0018ACE5 /* Sources */,
 				B07A02361FB09B6F0018ACE5 /* Frameworks */,
@@ -373,9 +370,9 @@
 			);
 			dependencies = (
 			);
-			name = electra;
+			name = electraRemover;
 			productName = async_wake_ios;
-			productReference = B07A02391FB09B6F0018ACE5 /* electra.app */;
+			productReference = B07A02391FB09B6F0018ACE5 /* electraRemover.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -406,7 +403,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B07A02381FB09B6F0018ACE5 /* electra */,
+				B07A02381FB09B6F0018ACE5 /* electraRemover */,
 			);
 		};
 /* End PBXProject section */
@@ -431,7 +428,6 @@
 				F14151A5203F87BC00CAEBDB /* AppIcon29x29.png in Resources */,
 				B07A02461FB09B6F0018ACE5 /* Assets.xcassets in Resources */,
 				F1954022200BFE86000D094F /* AppIcon20x20@2x.png in Resources */,
-				17D60E912032280600902E73 /* bootstrap.tar.gz in Resources */,
 				F195401E200BFE86000D094F /* AppIcon83.5x83.5@2x.png in Resources */,
 				F1954023200BFE86000D094F /* AppIcon76x76@2x.png in Resources */,
 				F1A6290D20357C45007B52B4 /* move.sh in Resources */,
@@ -658,7 +654,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.coolstar.electra;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joedaguy.electraremover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -685,7 +681,7 @@
 					"-framework",
 					IOKit,
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.coolstar.electra;
+				PRODUCT_BUNDLE_IDENTIFIER = com.joedaguy.electraremover;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -703,7 +699,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "electra" */ = {
+		B07A024F1FB09B6F0018ACE5 /* Build configuration list for PBXNativeTarget "electraRemover" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B07A02501FB09B6F0018ACE5 /* Debug */,

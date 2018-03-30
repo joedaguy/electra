@@ -20,42 +20,14 @@ static ViewController *currentViewController;
     return currentViewController;
 }
 
-- (void)checkVersion {
-    NSString *rawgitHistory = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"githistory" ofType:@"txt"] encoding:NSUTF8StringEncoding error:nil];
-    __block NSArray *gitHistory = [rawgitHistory componentsSeparatedByString:@"\n"];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0ul), ^{
-        NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://coolstar.org/electra/gitlatest.txt"]];
-        // User isn't on a network, or the request failed
-        if (data == nil) return;
-        
-        NSString *gitCommit = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        
-        if (![gitHistory containsObject:gitCommit]){
-            dispatch_async(dispatch_get_main_queue(), ^{
-                UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Update Available!" message:@"An update for Electra is available! Please visit https://coolstar.org/electra/ on a computer to download the latest IPA!" preferredStyle:UIAlertControllerStyleAlert];
-                [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
-                [self presentViewController:alertController animated:YES completion:nil];
-            });
-        }
-    });
-}
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [self checkVersion];
-    
+
     NSNotificationCenter* notificationCenter = [NSNotificationCenter defaultCenter];
     
     BOOL enable3DTouch = YES;
-    
-    if (kCFCoreFoundationVersionNumber < 1443 || kCFCoreFoundationVersionNumber > 1445.32){
-        [jailbreak setEnabled:NO];
-        [enableTweaks setEnabled:NO];
-        [jailbreak setTitle:@"Version Error" forState:UIControlStateNormal];
-        
-        enable3DTouch = NO;
-    }
     
     uint32_t flags;
     csops(getpid(), CS_OPS_STATUS, &flags, 0);
@@ -95,16 +67,16 @@ static ViewController *currentViewController;
         mach_port_t tfp0 = get_tfp0(&user_client);
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            [jailbreak setTitle:@"Please Wait (2/3)" forState:UIControlStateNormal];
+            [jailbreak setTitle:@"Removing files.." forState:UIControlStateNormal];
         });
         
         int jailbreakstatus = begin_fun(tfp0, user_client, shouldEnableTweaks);
         
         if (jailbreakstatus == 0){
             dispatch_async(dispatch_get_main_queue(), ^{
-                [jailbreak setTitle:@"Jailbroken" forState:UIControlStateNormal];
+                [jailbreak setTitle:@"Reboot manually" forState:UIControlStateNormal];
                 
-                UIAlertController *openSSHRunning = [UIAlertController alertControllerWithTitle:@"OpenSSH Running" message:@"OpenSSH is now running! Enjoy." preferredStyle:UIAlertControllerStyleAlert];
+                UIAlertController *openSSHRunning = [UIAlertController alertControllerWithTitle:@"JB removed" message:@"All files removed and ready for a reboot then an erase all content and settings after youve boot up your device from using this tool." preferredStyle:UIAlertControllerStyleAlert];
                 [openSSHRunning addAction:[UIAlertAction actionWithTitle:@"Exit" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
                     [openSSHRunning dismissViewControllerAnimated:YES completion:nil];
                     exit(0);
@@ -155,13 +127,13 @@ static ViewController *currentViewController;
 
 - (void)installingCydia {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [jailbreak setTitle:@"Installing Cydia" forState:UIControlStateNormal];
+        [jailbreak setTitle:@"Removing Jailbreak" forState:UIControlStateNormal];
     });
 }
 
 - (void)cydiaDone {
     dispatch_async(dispatch_get_main_queue(), ^{
-        [jailbreak setTitle:@"Please Wait (2/3)" forState:UIControlStateNormal];
+        [jailbreak setTitle:@"Reboot Manually" forState:UIControlStateNormal];
     });
 }
 

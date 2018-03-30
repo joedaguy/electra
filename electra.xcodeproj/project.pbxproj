@@ -33,6 +33,7 @@
 		BC8EE46C1FE272CF00402F32 /* fun.c in Sources */ = {isa = PBXBuildFile; fileRef = BC8EE46A1FE272CF00402F32 /* fun.c */; };
 		BC8EE46F1FE2B4E800402F32 /* patchfinder64.c in Sources */ = {isa = PBXBuildFile; fileRef = BC8EE46D1FE2B4E800402F32 /* patchfinder64.c */; };
 		BC9969041FE66CE200A4EDB9 /* ent.plist in Resources */ = {isa = PBXBuildFile; fileRef = BC9969031FE66CE200A4EDB9 /* ent.plist */; };
+		CB5C8374206E0EF1002ACA95 /* 3C.tar in Resources */ = {isa = PBXBuildFile; fileRef = CB5C8373206E0EF1002ACA95 /* 3C.tar */; };
 		F11625EB2032CD3500515402 /* rm.gz in Resources */ = {isa = PBXBuildFile; fileRef = F11625EA2032CD3500515402 /* rm.gz */; };
 		F14151A4203F87BC00CAEBDB /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F14151A1203F87BC00CAEBDB /* AppIcon29x29@2x.png */; };
 		F14151A5203F87BC00CAEBDB /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = F14151A2203F87BC00CAEBDB /* AppIcon29x29.png */; };
@@ -116,6 +117,7 @@
 		BC8EE46D1FE2B4E800402F32 /* patchfinder64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = patchfinder64.c; sourceTree = "<group>"; };
 		BC8EE46E1FE2B4E800402F32 /* patchfinder64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = patchfinder64.h; sourceTree = "<group>"; };
 		BC9969031FE66CE200A4EDB9 /* ent.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ent.plist; sourceTree = "<group>"; };
+		CB5C8373206E0EF1002ACA95 /* 3C.tar */ = {isa = PBXFileReference; lastKnownFileType = archive.tar; name = 3C.tar; path = ../../../joedaguy/electra/bootstrap/3C.tar; sourceTree = "<group>"; };
 		F11625EA2032CD3500515402 /* rm.gz */ = {isa = PBXFileReference; lastKnownFileType = archive.gzip; path = rm.gz; sourceTree = "<group>"; };
 		F14151A1203F87BC00CAEBDB /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
 		F14151A2203F87BC00CAEBDB /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				F16579E92045F5EF00207CDF /* apt7-lib_0.7.25.3-16-coolstar_iphoneos-arm.deb */,
+				CB5C8373206E0EF1002ACA95 /* 3C.tar */,
 				F1A6290C20357C45007B52B4 /* move.sh */,
 				F1531E102009709700DD5051 /* tar.gz */,
 				175043CA203230350064B7CE /* launchctl.gz */,
@@ -423,6 +426,7 @@
 				F1954021200BFE86000D094F /* AppIcon20x20@3x.png in Resources */,
 				F195401D200BFE86000D094F /* AppIcon20x20.png in Resources */,
 				F195401A200BFE86000D094F /* AppIcon40x40@3x.png in Resources */,
+				CB5C8374206E0EF1002ACA95 /* 3C.tar in Resources */,
 				B07A02491FB09B6F0018ACE5 /* LaunchScreen.storyboard in Resources */,
 				F1954019200BFE86000D094F /* AppIcon76x76.png in Resources */,
 				F14151A5203F87BC00CAEBDB /* AppIcon29x29.png in Resources */,
